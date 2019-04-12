@@ -1302,7 +1302,7 @@ class WebappInternal(Base):
             while(time.time() < endtime and container is None):
                 soup = self.get_current_DOM()
 
-                if check_error:
+                if check_error and optional_term != 'button':
                     self.search_for_errors(soup)
 
                 if self.config.log_file:
